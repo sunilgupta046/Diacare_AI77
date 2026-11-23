@@ -1,0 +1,11 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.git/
+.pytest_cache/
+.vscode/
+backend/diacare.db
+backend/diacare.db-*
