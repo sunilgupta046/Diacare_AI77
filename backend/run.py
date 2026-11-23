@@ -12,7 +12,10 @@ from dotenv import load_dotenv
 
 load_dotenv(BACKEND_DIR / ".env")
 
-from api import app
+try:
+    from .diabetes_ml.api import app
+except ImportError:
+    from api import app
 
 if __name__ == "__main__":
     uvicorn.run(

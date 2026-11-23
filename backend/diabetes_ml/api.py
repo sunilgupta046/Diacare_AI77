@@ -191,6 +191,7 @@ def predict_hba1c(payload: Hba1cRequest) -> Dict[str, Any]:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     return {
         "predicted_hba1c_pct": predicted,
+        "predicted_hba1c": predicted,
         "method": "clinical_adag",
         "value_count": len(payload.readings),
     }
